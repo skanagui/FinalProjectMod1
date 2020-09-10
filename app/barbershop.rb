@@ -1,2 +1,2 @@
-class Barbershops < ActiveRecord::Base 
+class Barbershop < ActiveRecord::Base 
 end 

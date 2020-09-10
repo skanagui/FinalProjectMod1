@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2020_09_10_154942) do
 
   create_table "appointments", force: :cascade do |t|
-    t.string "booked"
+    t.string "status"
   end
 
   create_table "barbers", force: :cascade do |t|
