@@ -1,11 +1,11 @@
 <<<<<<< HEAD
 #### Barbers
 
-jamal    = Barber.create("Jamal",    3)
-jeronimo = Barber.create("Jeronimo", 7)
-sidney   = Barber.create("Sidney",   3)
-wendy    = Barber.create("Wendy",    2)
-zora     = Barber.create("Zora",    16)
+jamal    = Barber.create(name: "Jamal",    experience:  3)
+jeronimo = Barber.create(name: "Jeronimo", experience:  7)
+sidney   = Barber.create(name: "Sidney",   experience:  3)
+wendy    = Barber.create(name: "Wendy",    experience:  2)
+zora     = Barber.create(name: "Zora",     experience: 16)
 
 ####  (name, experience) 
 
@@ -14,10 +14,10 @@ zora     = Barber.create("Zora",    16)
 
 #### Barbershops
 
-shop1 = Barbershop.create("Shop A", 4)
-shop2 = Barbershop.create("Shop B", 3)
-shop3 = Barbershop.create("Shop C", 4)
-shop4 = Barbershop.create("Shop D", 5)
+shop1 = Barbershop.create(name: "Shop A", rating: 4)
+shop2 = Barbershop.create(name: "Shop B", rating: 3)
+shop3 = Barbershop.create(name: "Shop C", rating: 4)
+shop4 = Barbershop.create(name: "Shop D", rating: 5)
 
 ####  (name, rating)
 
@@ -26,10 +26,10 @@ shop4 = Barbershop.create("Shop D", 5)
 
 #### Appointments
 
-appo1 = Appointment.create("Booked",     user,    jamal)
-appo2 = Appointment.create("Booked",     user, jeronimo)
-appo3 = Appointment.create("Booked",     user, jeronimo)
-appo4 = Appointment.create("Booked",     user,    wendy)
-appo5 = Appointment.create("Not Booked", user,     zora)
+appo1 = Appointment.create(booked: "Booked")     #,     user,    jamal)
+appo2 = Appointment.create(booked: "Booked")     #,     user, jeronimo)
+appo3 = Appointment.create(booked: "Booked")     #,     user, jeronimo)
+appo4 = Appointment.create(booked: "Booked")     #,     user,    wendy)
+appo5 = Appointment.create(booked: "Not Booked") #, user,     zora)
 
 ####  (IS BOOKED?, user, barber)
