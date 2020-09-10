@@ -12,9 +12,27 @@
 
 ActiveRecord::Schema.define(version: 2020_09_10_154942) do
 
+  create_table "appointments", force: :cascade do |t|
+    t.string "booked"
+  end
+
   create_table "barbers", force: :cascade do |t|
     t.string "name"
     t.integer "experience"
+  end
+
+  create_table "barbershops", force: :cascade do |t|
+    t.string "name"
+    t.integer "rating"
+  end
+
+  create_table "barberstyles", force: :cascade do |t|
+    t.string "name"
+    t.integer "price"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
   end
 
 end
