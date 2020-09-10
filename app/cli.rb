@@ -1,13 +1,16 @@
-class CLI < ActiveRecord::Base
+class CLI
 
-    puts puts puts puts 
-    puts "Yurrr"
-    puts "Welcome to the Barber Finder App!
-What's Your Name Homie?"
+    def welcome
+
+        puts puts puts puts 
+        puts "Yurrr"
+        puts "Welcome to the Barber Finder App!"
+        puts "What's Your Name Homie?"
 
 
-    # name = gets.chomp
-    # puts "Ight #{name}! We need to get you finessed ASAP myG!"
+        name = gets.chomp
+        puts "Ight #{name}! We need to get you finessed ASAP myG!"
+    end
 
 
 end 

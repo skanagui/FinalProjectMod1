@@ -1,5 +1,5 @@
 class Barber < ActiveRecord::Base 
-      #has many: appointments
+      has_many :appointments
 
 end 
 

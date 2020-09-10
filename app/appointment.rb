@@ -1,4 +1,5 @@
 class Appointment < ActiveRecord::Base 
-      #belongs to :user
-      #belongs to :barber
+      belongs_to :user
+      belongs_to :barber
+
 end 
