@@ -4,7 +4,18 @@ Barber.destroy_all
 Barbershop.destroy_all
 
 
+#### Users
+
+seyi = User.create(name: "Seyi")
+sam  = User.create(name:  "Sam")
+
+####  (name) 
+
+
+
+
 #### Barbers
+
 jamal    = Barber.create(name: "Jamal",    experience:  3)
 jeronimo = Barber.create(name: "Jeronimo", experience:  7)
 sidney   = Barber.create(name: "Sidney",   experience:  3)
@@ -37,4 +48,4 @@ appo3 = Appointment.create(status: "Booked")     #,     user, jeronimo)
 appo4 = Appointment.create(status: "Booked")     #,     user,    wendy)
 appo5 = Appointment.create(status: "Not Booked") #, user,     zora)
 
-####  (IS BOOKED?, user, barber)
+####  (IS BOOKED?)          ## user, barber)
