@@ -1,0 +1,1 @@
+barber = Barber.new("Name")

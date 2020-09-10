@@ -1,2 +1,1 @@
-Class Barber
-end 
+
