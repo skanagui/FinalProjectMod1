@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #### Barbers
 
 jamal    = Barber.create("Jamal",    3)
