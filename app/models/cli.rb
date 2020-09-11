@@ -4,7 +4,34 @@
 class CLI
 
     sleep(2)
+    
+    # def main_menu
+    #     # active_user = seyi
+    #         # seyi.EVERYTHING
+    #         # sam.EVERYTHING
+    #     opt = prompt.select("Welcome back yo! Whatchu wanna do?", %w(View_Appointments Change_Appointment Cancel_Appointment Logout))
+            
+    #         case opt  # *** XX- (ALL)(seyi)s
 
+    #         when "View_Appointments"
+    #              seyi.view_appointments_asthetic
+
+    #              main_menu
+    #         when "Change_Appointment"
+    #              sam.change_appointment                
+    #             #  seyi.change_appointment
+    #              main_menu
+    #         when "Cancel_Appointment"
+    #             #  sam.cancel_all_appointments 
+    #              main_menu
+    #         when "Logout"
+    #              puts puts puts puts 
+    #              puts a.asciify("STAY FLOSSY !!!") 
+
+    #         end 
+            
+
+    # end
     def welcome_sign_up_in
         
 
@@ -90,9 +117,9 @@ class CLI
 
         #### BEGIN ***
 
-        puts "Yurrr 😎"
+        puts "Yurrr!! 😎"
         puts "Welcome to the Barber Finder App!"
-        sleep(0.7)   # creates a pause 
+        sleep(1)   # creates a pause 
         puts "Create your username and password homie!"
 
         puts "Please create your Username and Password"
@@ -105,17 +132,19 @@ class CLI
 
         active_user = User.create(name: username)
         puts "===="
-        puts active_user
-        puts active_user.name
+                    # puts active_user  # PUTS ADDRESS   ***
+        puts "Ayeee 😝! Wahsgoodie #{active_user.name} 😎"
+
         puts "===="
-        # active_user = username
-        # active_user = User.last
+
+                                #  -x-  # active_user = username
+
+        active_user = User.last
 
         # *** create USER!!!!
         # !!!!
         # !!!!
 
-        User.all
 
 
         list_o_barbs = Barber.all.map{ |barb| barb.name }
@@ -126,36 +155,66 @@ class CLI
         # -T- #
         puts chosen_barb
         
-        if(chosen_barb == "Jamal")
-          # "Jamal👴🏻" || "Jaronimo👨🏿‍🦳" || "Sidney👧🏽" || "Wendy👩🏿‍🦳" || "Zora👩🏽‍🦰")
+        if(chosen_barb == "Jamal" || chosen_barb == "Jaronimo" || chosen_barb == "Sidney" || chosen_barb == "Wendy" || chosen_barb == "Zora")
 
             puts "You have an appointment booked with #{chosen_barb} for a fresh cut!"
         end 
 
         
+        # self.main_menu
 
-        # active_user = seyi
-            # seyi.EVERYTHING
-            # sam.EVERYTHING
-        opt = prompt.select("Welcome back yo! Whatchu wanna do?", %w(View_Appointments Change_Appointment Cancel_Appointment Logout))
-            
-            case opt  # *** XX- (ALL)(seyi)s
+        # def self.main_menu
 
-            when "View_Appointments"
-                 seyi.view_appointments_asthetic
-            when "Change_Appointment"
-                 sam.change_appointment                
-                #  seyi.change_appointment
-            when "Cancel_Appointment"
-                 sam.cancel_all_appointments 
+            # active_user = seyi
+                # seyi.EVERYTHING
+                # sam.EVERYTHING
+            opt = prompt.select("Welcome back yo! Whatchu wanna do?", %w(View_Appointments Change_Appointment Cancel_Appointment Logout))
+                
+                case opt  # *** XX- (ALL)(seyi)s
+    
+                when "View_Appointments"
+                     seyi.view_appointments_asthetic
+    
+                     opt
+                when "Change_Appointment"
+                     sam.change_appointment                
+                    #  seyi.change_appointment
+                     opt
+                when "Cancel_Appointment"
+                    #  sam.cancel_all_appointments 
+                     opt
+                when "Logout"
+                     puts puts puts puts 
+                     puts a.asciify("STAY FLOSSY !!!") 
+    
+                end 
+                
+    
+        # end  
 
-            when "Logout"
-                 puts puts puts puts 
-                 puts a.asciify("STAY FLOSSY !!!") 
+    end             
 
-            end 
-            
-            
+
+end 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             #if view_appointments == true 
             #puts "You are booked "#{view_appointments}"
             # elsif Change_Appointment == true
@@ -168,23 +227,6 @@ class CLI
 
         # you can check appointments 
         # options to view all/change(appointment updated)/cancel status(if cancel then stay crusty fam)
-
-
-
-
-
-
-
-
-
-
-
-    end             
-
-
-
-
-end 
 
 
 #
