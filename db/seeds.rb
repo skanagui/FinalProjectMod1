@@ -1,7 +1,9 @@
 
 
 Barber.destroy_all
-Barbershop.destroy_all
+#Barbershop.destroy_all
+
+
 
 
 #### Users
@@ -27,25 +29,26 @@ zora     = Barber.create(name: "Zora",     experience: 16)
 
 
 
-#### Barbershops
+# #### Barbershops
 
 
-shop1 = Barbershop.create(name: "Shop A", rating: 4)
-shop2 = Barbershop.create(name: "Shop B", rating: 3)
-shop3 = Barbershop.create(name: "Shop C", rating: 4)
-shop4 = Barbershop.create(name: "Shop D", rating: 5)
+# shop1 = Barbershop.create(name: "Shop A", rating: 4)
+# shop2 = Barbershop.create(name: "Shop B", rating: 3)
+# shop3 = Barbershop.create(name: "Shop C", rating: 4)
+# shop4 = Barbershop.create(name: "Shop D", rating: 5)
 
-####  (name, rating)
+# ####  (name, rating)
 
 
 
 
 #### Appointments
 
-appo1 = Appointment.create(status: "Booked")     #,     user,    jamal)
+appo1 = Appointment.create(status: "Booked", user_id: 1, barber_id: 2)     #,     user,    jamal)
 appo2 = Appointment.create(status: "Booked")     #,     user, jeronimo)
 appo3 = Appointment.create(status: "Booked")     #,     user, jeronimo)
 appo4 = Appointment.create(status: "Booked")     #,     user,    wendy)
 appo5 = Appointment.create(status: "Not Booked") #, user,     zora)
+# appo6 = Appointment.create(status: "Booked")
 
 ####  (IS BOOKED?)          ## user, barber)

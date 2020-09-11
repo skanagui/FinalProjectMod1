@@ -14,6 +14,8 @@ ActiveRecord::Schema.define(version: 2020_09_10_154942) do
 
   create_table "appointments", force: :cascade do |t|
     t.string "status"
+    t.integer "user_id"
+    t.integer "barber_id"
   end
 
   create_table "barbers", force: :cascade do |t|
