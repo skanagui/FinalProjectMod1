@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
     has_many :barbers, through: :appointments 
 
 
+
+
     # def self.save_user(id_to_save, user_to_save)
     #     user_to_save = User.last
     # end
@@ -38,6 +40,26 @@ class User < ActiveRecord::Base
 
 
 
+    def self.user_dot_all
+        User.all
+    end
+    ####
+        def self.view_all_users
+                puts  "|  GETTING ALL USER NAMES  |"
+                puts  "|--------------------------|"
+
+            user_dot_all.each do |each_users|
+
+                puts "|  User: #{each_users.name}  |"
+
+            end
+
+        end
+    ####
+
+
+
+
     def view_barbers
         Barber.all
     end
@@ -52,8 +74,22 @@ class User < ActiveRecord::Base
         # making_this_appo
     end
     def view_appointments  #  Pretty Much (==) @user.appointments...
-        Appointment.all.filter{ |appo| appo.user_id == self.id }
+        Appointment.all.filter{ |appo| # puts "bagabaga"
+        
+        appo.user_id == self.id 
+
+        }
     end
+    ####
+        def view_appointments_asthetic
+            view_appointments.each do |user_appo|
+
+                puts "|  Status: #{user_appo.status}  | User: #{user_appo.user_id}  |  Barber: #{user_appo.barber_id}  |"
+
+            end
+
+        end
+    ####
     def change_appointment
         prompt = TTY::Prompt.new
         

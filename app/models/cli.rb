@@ -1,32 +1,70 @@
+#require 'tty'
+
 
 class CLI
+
+    sleep(2)
+
     def welcome_sign_up_in
+        
+
+        puts puts puts puts 
+        a = Artii::Base.new :font => 'slant'
+        puts a.asciify("YUURRR!!")
+
+            sleep(2)
+
         prompt = TTY::Prompt.new
 
 
         # User.destroy_all
 
 
-        # -T- #
-        #### LOADING PREV USERS
-        puts puts 
-        puts User.all
+
+
+####################
+
+
+        ####  Users
+
+        # puts puts 
+        # User.view_all_users
+
+
         all_users = User.all
+
         seyi = all_users[0]
         sam  = all_users[1]
-        puts
-        puts 
-        puts seyi.name
-        puts seyi.id
-        puts "----"
-        puts sam.name
-        puts sam.id
-        puts "----"
+
+        ########
+
+
+
+
+        ####  Barbers
+
+        # puts puts
+        # Barber.view_all_barbers
+
+
+        all_barbers = Barber.all
+
+        jamal    = all_barbers[0] 
+        jeronimo = all_barbers[1] 
+        sidney   = all_barbers[2] 
+        wendy    = all_barbers[3] 
+        zora     = all_barbers[4]      
+        
+        ####
+
+
+####################
+
+
+        # XX-
         # puts User.seyi
 
-        puts
-        puts Barber.all
-        puts
+      
 
 
         list_o_appos = Appointment.all.filter{ |appo| 
@@ -38,10 +76,10 @@ class CLI
                         # puts appo.barber_id
 
                     } # ***
-        puts list_o_appos[0].user_id
+        # puts list_o_appos[0].user_id
 
         seyi.make_appointment("Booked", seyi.id, 5)
-        puts seyi.view_appointments
+        puts 
 
 
         
@@ -81,23 +119,67 @@ class CLI
 
 
         list_o_barbs = Barber.all.map{ |barb| barb.name }
-        chosen_barb = prompt.select("Yeee Boi! Select Ya Barber!", (list_o_barbs))  
+        # ***
+        chosen_barb = prompt.select("Yeee Boi! Select Ya Barber!", (list_o_barbs))
+    
 
+        # -T- #
         puts chosen_barb
-        if(chosen_barb == "Jamal")
-            puts "appointment with #{chosen_barb}"
         
-        end
+        if(chosen_barb == "Jamal")
+          # "Jamal👴🏻" || "Jaronimo👨🏿‍🦳" || "Sidney👧🏽" || "Wendy👩🏿‍🦳" || "Zora👩🏽‍🦰")
+
+            puts "You have an appointment booked with #{chosen_barb} for a fresh cut!"
+        end 
+
+        
+
+        # active_user = seyi
+            # seyi.EVERYTHING
+            # sam.EVERYTHING
+        opt = prompt.select("Welcome back yo! Whatchu wanna do?", %w(View_Appointments Change_Appointment Cancel_Appointment Logout))
+            
+            case opt  # *** XX- (ALL)(seyi)s
+
+            when "View_Appointments"
+                 seyi.view_appointments_asthetic
+            when "Change_Appointment"
+                 sam.change_appointment                
+                #  seyi.change_appointment
+            when "Cancel_Appointment"
+                 sam.cancel_all_appointments 
+
+            when "Logout"
+                 puts puts puts puts 
+                 puts a.asciify("STAY FLOSSY !!!") 
+
+            end 
+            
+            
+            #if view_appointments == true 
+            #puts "You are booked "#{view_appointments}"
+            # elsif Change_Appointment == true
+            #puts "Give us a call and we'll show you availabilities 555-555-5555"
+            # if Cancel_Appointment == true 
+            # if Log out == true 
+
+
+            #log back in with username and password name 
+
+        # you can check appointments 
+        # options to view all/change(appointment updated)/cancel status(if cancel then stay crusty fam)
+
+
+
+
+
+
+
+
+
+
 
     end             
-
-
-
-
-
-
-
-
 
 
 
