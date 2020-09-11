@@ -114,7 +114,7 @@ class User < ActiveRecord::Base
         puts "Bet👏 Say No More Fam👏"
 
         self.appointments.delete_all
-        puts "BOOM👏 Done. Stay Crusty Fam... 😅💵"
+        puts "BOOM👏 Done. Stay Crusty Fam... 💰😅💵"
 
     end
     # delete first / last 
