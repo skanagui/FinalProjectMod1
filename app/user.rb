@@ -16,10 +16,12 @@ class User < ActiveRecord::Base
         # puts "Please enter your Username and Password"
         # username = prompt.ask("Username: ",  required: true)
         # password = prompt.mask("Password: ", required: true)                           
-                                                                            
+                            
+        
         # User.create(name: username)
         # active_user = username
         # active_user = User.last
+
 
         # User.find_by(name: user_to_find)
     
@@ -82,7 +84,7 @@ class User < ActiveRecord::Base
         end
 
     end
-    def delete_appointment  # *** cancel
+    def cancel_appointment  
         prompt = TTY::Prompt.new
         
         ##  If :: (User) Has More Than 1 Appointment  ##
@@ -105,13 +107,13 @@ class User < ActiveRecord::Base
 
     end
     #Event.all.select{ |event| event.destroy if event.name == cancel_this }
-    def delete_all_appointments 
+    def cancel_all_appointments 
         prompt = TTY::Prompt.new
 
         puts puts
         puts "You sure you wanna clip everybody?"
         puts puts 
-        puts "Bet👏 Say No More Fam👏"
+        puts "Bet👏 Say No More Homie👏"
 
         self.appointments.delete_all
         puts "BOOM👏 Done. Stay Crusty Fam... 💰😅💵"
